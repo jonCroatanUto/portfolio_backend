@@ -13,7 +13,7 @@ async function getAllWebsProjects(req, res) {
     });
   }
 }
-async function addOneVoteToWeb(req, res) {
+async function getOneWeb(req, res) {
   const { webID } = req.params;
   console.log(webID);
   try {
@@ -31,5 +31,5 @@ async function addOneVoteToWeb(req, res) {
 
 module.exports = {
   getAllWebsProjects: getAllWebsProjects,
-  addOneVoteToWeb: addOneVoteToWeb,
+  getOneWeb: getOneWeb,
 };

@@ -13,7 +13,7 @@ async function getAllSkills(req, res) {
     });
   }
 }
-async function addOneVoteToSkill(req, res) {
+async function getOneSkill(req, res) {
   const { skill } = req.params;
   console.log(skill);
   try {
@@ -31,5 +31,5 @@ async function addOneVoteToSkill(req, res) {
 
 module.exports = {
   getAllSkills: getAllSkills,
-  addOneVoteToSkill: addOneVoteToSkill,
+  getOneSkill: getOneSkill,
 };
