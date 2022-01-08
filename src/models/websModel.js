@@ -26,5 +26,5 @@ const webs = new Schema(
   }
 );
 
-const webModel = mongoose.model("webModel", webs);
+const webModel = mongoose.model("webs", webs);
 module.exports = webModel;
