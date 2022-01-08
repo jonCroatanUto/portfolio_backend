@@ -7,6 +7,10 @@ const skill = new Schema(
       type: String,
       default: "",
     },
+    description: {
+      type: String,
+      default: "",
+    },
 
     votes: {
       type: Number,
