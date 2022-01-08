@@ -1,8 +1,8 @@
-const { AboutMeModel } = require("../models");
+const { skillModel } = require("../models");
 
 async function getAllSkills(req, res) {
   try {
-    const skills = await videosModel.find({});
+    const skills = await skillModel.find({});
     return res.status(200).send({
       message: "this all your skills",
       data: skills,

@@ -13,6 +13,7 @@ async function getAllVideos(req, res) {
     });
   }
 }
+
 async function addOneVoteToVideo(req, res) {
   const { videosID } = req.params;
   console.log(videosID);

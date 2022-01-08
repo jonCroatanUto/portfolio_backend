@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const abouteMe = new Schema(
+const skill = new Schema(
   {
     skill: {
       type: String,
@@ -23,5 +23,5 @@ const abouteMe = new Schema(
   }
 );
 
-const AboutMeModel = mongoose.model("aboutMeModel", abouteMe);
-module.exports = AboutMeModel;
+const skillModel = mongoose.model("skill", skill);
+module.exports = skillModel;

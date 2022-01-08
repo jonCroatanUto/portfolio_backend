@@ -1,8 +1,8 @@
 const webModel = require("./websModel");
-const AboutMeModel = require("./aboutMeModel");
+const skillModel = require("./skillModel");
 const videosModel = require("./videosModel");
 module.exports = {
   webModel: webModel,
-  AboutMeModel: AboutMeModel,
+  skillModel: skillModel,
   videosModel: videosModel,
 };

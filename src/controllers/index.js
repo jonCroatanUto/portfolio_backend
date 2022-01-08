@@ -1,8 +1,8 @@
-const aboutMeController = require("./aboutMeController");
+const skillController = require("./skillController");
 const videosController = require("./videosController");
 const webController = require("./webController");
 module.exports = {
-  aboutMeController: aboutMeController,
+  skillController: skillController,
   videosController: videosController,
   webController: webController,
 };
