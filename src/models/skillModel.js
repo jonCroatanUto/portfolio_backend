@@ -1,16 +1,17 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const videos = new Schema(
+const skill = new Schema(
   {
-    keyword: {
+    skill: {
       type: String,
       default: "",
     },
-    url: {
+    description: {
       type: String,
       default: "",
     },
+
     votes: {
       type: Number,
       default: 0,
@@ -26,5 +27,5 @@ const videos = new Schema(
   }
 );
 
-const videosModel = mongoose.model("videos", videos);
-module.exports = videosModel;
+const skillModel = mongoose.model("skills", skill);
+module.exports = skillModel;

@@ -6,7 +6,7 @@ const { json } = require("body-parser");
 const cors = require("cors");
 // const { config } = require("./config");
 // routes
-// const { userRouter, shopRouter, shopListRouter } = require("./routes");
+const { skillsRouter, videosRouter, websRouter } = require("./routes");
 
 // app creationgifRouter
 
@@ -19,9 +19,9 @@ app.use(json());
 app.use(cors());
 
 // app used routes
-// app.use("/users", userRouter);
-// app.use("/shop", shopRouter);
-// app.use("/shopList", shopListRouter);
+app.use("/skills", skillsRouter);
+app.use("/videos", videosRouter);
+app.use("/webs", websRouter);
 
 // test request to see server works properly
 app.get("/", (req, res) => {
