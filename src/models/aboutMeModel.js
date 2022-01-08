@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const abouteMe = new Schema(
   {
-    keyword: {
+    skill: {
       type: String,
       default: "",
     },
