@@ -14,13 +14,33 @@ async function getAllSkills(req, res) {
   }
 }
 async function getOneSkill(req, res) {
-  const { skill } = req.params;
-  console.log(skill);
+  const { id: skillID } = req.params;
+
   try {
-    const skill = await AboutMeModel.findById(videosID);
+    const skill = await skillModel.findById(skillID);
     return res.status(200).send({
       message: "the skill have been founded",
-      data: skill,
+      skill: skill,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      error: error.message,
+    });
+  }
+}
+async function createSkill(req, res) {
+  const { skill, description, votes, comments } = req.body;
+
+  try {
+    const newSkill = await skillModel.create({
+      skill: skill,
+      description: description,
+      votes: votes,
+      comments: comments,
+    });
+    return res.status(200).send({
+      message: "the skill have been created",
+      data: newSkill,
     });
   } catch (error) {
     return res.status(500).send({
@@ -30,6 +50,7 @@ async function getOneSkill(req, res) {
 }
 
 module.exports = {
+  createSkill: createSkill,
   getAllSkills: getAllSkills,
   getOneSkill: getOneSkill,
 };
