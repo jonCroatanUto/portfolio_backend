@@ -16,6 +16,18 @@ const skill = new Schema(
       type: Number,
       default: 0,
     },
+    fontFamily: {
+      type: String,
+      default: "",
+    },
+    fontColor: {
+      type: String,
+      default: "",
+    },
+    fontSize: {
+      type: Number,
+      default: 0,
+    },
 
     comments: {
       type: Array,
