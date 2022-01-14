@@ -29,13 +29,24 @@ async function getOneSkill(req, res) {
   }
 }
 async function createSkill(req, res) {
-  const { skill, description, votes, comments } = req.body;
-
+  const {
+    skill,
+    description,
+    votes,
+    fontFamily,
+    fontColor,
+    fontSize,
+    comments,
+  } = req.body;
+  console.log(fontFamily);
   try {
     const newSkill = await skillModel.create({
       skill: skill,
       description: description,
       votes: votes,
+      fontFamily: fontFamily,
+      fontColor: fontColor,
+      fontSize: fontSize,
       comments: comments,
     });
     return res.status(200).send({
