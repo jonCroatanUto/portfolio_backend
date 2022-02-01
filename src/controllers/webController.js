@@ -28,8 +28,32 @@ async function getOneWeb(req, res) {
     });
   }
 }
+async function addWeb(req, res) {
+  const { projectNames, url, imageUrl, description, votes, comments } =
+    req.body;
+
+  try {
+    const newWeb = await webModel.create({
+      projectNames: projectNames,
+      url: url,
+      imageUrl: imageUrl,
+      description: description,
+      votes: votes,
+      comments: comments,
+    });
+    return res.status(200).send({
+      message: "the web have been created",
+      data: newWeb,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      error: error.message,
+    });
+  }
+}
 
 module.exports = {
   getAllWebsProjects: getAllWebsProjects,
   getOneWeb: getOneWeb,
+  addWeb: addWeb,
 };

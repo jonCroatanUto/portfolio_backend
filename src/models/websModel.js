@@ -3,11 +3,19 @@ const { Schema } = mongoose;
 
 const webs = new Schema(
   {
-    keyword: {
+    projectNames: {
       type: String,
       default: "",
     },
     url: {
+      type: String,
+      default: "",
+    },
+    imageUrl: {
+      type: String,
+      default: "",
+    },
+    description: {
       type: String,
       default: "",
     },

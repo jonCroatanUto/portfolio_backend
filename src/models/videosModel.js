@@ -3,11 +3,20 @@ const { Schema } = mongoose;
 
 const videos = new Schema(
   {
-    keyword: {
+    title: {
       type: String,
       default: "",
     },
     url: {
+      type: String,
+      default: "",
+    },
+
+    imageUrl: {
+      type: String,
+      default: "",
+    },
+    description: {
       type: String,
       default: "",
     },

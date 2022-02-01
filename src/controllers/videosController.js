@@ -29,8 +29,31 @@ async function getOneVideo(req, res) {
     });
   }
 }
+async function addVideoAnimation(req, res) {
+  const { title, url, imageUrl, description, votes, comments } = req.body;
+
+  try {
+    const newVideo = await videosModel.create({
+      title: title,
+      url: url,
+      imageUrl: imageUrl,
+      description: description,
+      votes: votes,
+      comments: comments,
+    });
+    return res.status(200).send({
+      message: "the video have been created",
+      data: newVideo,
+    });
+  } catch (error) {
+    return res.status(500).send({
+      error: error.message,
+    });
+  }
+}
 
 module.exports = {
   getAllVideos: getAllVideos,
   getOneVideo: getOneVideo,
+  addVideoAnimation: addVideoAnimation,
 };
