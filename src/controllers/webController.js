@@ -29,12 +29,11 @@ async function getOneWeb(req, res) {
   }
 }
 async function addWeb(req, res) {
-  const { projectNames, url, imageUrl, description, votes, comments } =
-    req.body;
+  const { title, url, imageUrl, description, votes, comments } = req.body;
 
   try {
     const newWeb = await webModel.create({
-      projectNames: projectNames,
+      title: title,
       url: url,
       imageUrl: imageUrl,
       description: description,

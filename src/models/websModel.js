@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const webs = new Schema(
   {
-    projectNames: {
+    title: {
       type: String,
       default: "",
     },
